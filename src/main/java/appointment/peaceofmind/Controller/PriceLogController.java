@@ -46,4 +46,10 @@ public class PriceLogController {
         return "sab urr gaye";
     }
 
+    @PostMapping("/addall")
+    public String postAllPriceLogs(@RequestBody List<PriceLog> pricelogs){
+        pricelogrepo.saveAll(pricelogs);
+        return "gaye sab";
+    }
+
 }
